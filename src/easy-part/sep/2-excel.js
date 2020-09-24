@@ -23,5 +23,3 @@ var convertToTitle = function (n) {
 
   return result.join("");
 };
-
-console.log(convertToTitle(703)); // zzz
