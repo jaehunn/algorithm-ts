@@ -68,4 +68,5 @@ console.log(3 | 1); // 3
 
 console.log(4 | 1); // 5
 
-console.log(-1 >>> 0); // 4294967295
+console.log(-1 >>> 0); // 4294967295 (fill zero)
+console.log(-1 >> 0); // -1 (fill one)
