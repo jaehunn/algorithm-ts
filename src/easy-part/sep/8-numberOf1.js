@@ -11,18 +11,29 @@ var hammingWeight = function (n) {
     n >>>= 1;
   }
 
-  // TODO
-  // n - 1: 1109?
-  // n &= (n - 1)
+  return r;
+};
+
+var hammingWeight = function (n) {
+  let r = 0;
+  while (n) {
+    n &= n - 1;
+
+    r += 1;
+  }
 
   return r;
 };
 
-function _hammingWeight(n) {
+function hammingWeight(n) {
   return n.toString(2).split("0").join("").length;
 }
 
-console.log(hammingWeight(14)); // 14
+function hamminWeight(n) {
+  return n.toString(2).replace(/0/g, "").length;
+}
+
+console.log(_hammingWeight(14)); // 14
 
 // 1110
 // 1101
