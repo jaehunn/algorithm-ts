@@ -11,7 +11,7 @@ var twoSum = function (nums, target) {
     let c = target - nums[i];
 
     // index: 0 -> 'in' object
-    if (another in m) return [m[c], i];
+    if (c in m) return [m[c], i];
     // if (m[c] !== undefined) return [m[c], i];
 
     m[nums[i]] = i;
@@ -20,4 +20,4 @@ var twoSum = function (nums, target) {
   return null;
 };
 
-console.log(twoSum([2, 7, 11, 15], 9));
+
