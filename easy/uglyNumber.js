@@ -4,11 +4,10 @@
  */
 var isUgly = function (num) {
   if (num < 1) return false;
-  if (num === 1) return true;
 
-  // wip
+  while (!(num % 2)) num /= 2;
+  while (!(num % 3)) num /= 3;
+  while (!(num % 5)) num /= 5;
+
+  return num === 1;
 };
-
-// <2> 4 6 8
-// <3> 6 9
-// <5>
