@@ -4,41 +4,39 @@
  * @return {number}
  */
 
+// wip
 // binary search
-// ex) x = 5
 function mySqrt(x) {
   let l = 0;
-  let r = x; // 5
+  let r = x;
 
-  // 0 < 5
-  // 3 < 5
-  // 3 == 3 break;
+  // l === r break
   while (l < r) {
-    const m = Math.floor((l + r) / 2); // 2, 4
-
+    const m = Math.floor((l + r) / 2);
     if (m * m === x) return m;
+
     if (x < m * m) r = m - 1;
-    // r = 3
-    else l = m + 1; // l = 3
+    else l = m + 1;
   }
 
-  // 5 < 9, 5 = 2.xxx -> return 2;
   return x < r * r ? r - 1 : r;
 }
 
-function _mySqrt(x) {
-  if (x < 1) return 0;
+function mySqrt(x) {
+  if (x === 0) return 0;
+
   let l = 1;
   let r = x;
-  let m = 0;
 
+  let m = 0;
   while (l + 1 < r) {
     m = Math.floor((l + r) / 2);
 
-    if (m * m > x) r = m;
-    else if (m * m < x) l = m;
-    else return m;
+    if (x === m * m) return m;
+
+    x < m * m ? (r = m) : (l = m);
   }
 
   return l;
 }
+q;
